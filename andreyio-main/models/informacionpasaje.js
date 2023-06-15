@@ -10,7 +10,9 @@ const InformacionPasaje = new mongoose.Schema({
     ruta: { type: mongoose.Schema.Types.ObjectId, ref: 'ruta', required: true },
     valor: { type: mongoose.Schema.Types.ObjectId, ref: 'valor', required: true },
     vendedor: { type: mongoose.Schema.Types.ObjectId, ref: 'vendedor', required: true },
-    asiento:{ type:mongoose.Schema.Types.ObjectId, ref:'asiento', required:true}
+    asiento:{ type:mongoose.Schema.Types.ObjectId, ref:'asiento', required:true},
+    createdAt: { type: Date, default: date.now },
+    estado: { type: Number, default: 1 }
 })
 
 

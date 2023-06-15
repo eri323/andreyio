@@ -3,8 +3,11 @@ import mongoose from "mongoose";
 
 
 const asiento = new mongoose.Schema({
-    codigo_asientos: { type: String, required: true },
-    Estado_asiento: { type: String, required: true },
+    codigo_asientos: { type: String, required: true, unique: true},
     asientos_comprados: { type: Number, required: true },
+    createdAt: { type: Date, default:date.now },
+    estado:{type: Number, default:1 }
     
 })
+
+export default asiento

@@ -10,4 +10,4 @@ const asiento = new mongoose.Schema({
     
 })
 
-export default asiento
+export default mongoose.model(" asiento", asiento)

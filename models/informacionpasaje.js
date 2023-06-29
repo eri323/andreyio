@@ -15,7 +15,7 @@ const InformacionPasaje = new mongoose.Schema({
     estado: { type: Number, default: 1 }
 })
 
-export default InformacionPasaje
+export default mongoose.model(" InformacionPasaje", InformacionPasaje)
 
 
 

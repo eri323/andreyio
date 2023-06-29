@@ -22,10 +22,10 @@ const httpAsiento = {
     postAsiento: async (req, res) => {
         try {
             const { codigo_asientos, asientos_comprados }=   req.body
-            const Asiento = new Asiento({ codigo_asientos, asientos_comprados })
-      await Asiento.save()
+            const Asiento = new asiento({ codigo_asientos, asientos_comprados })
+       asiento.save()
 
-       res.json({Asiento})
+       res.json({asiento})
         } catch (error) {
             res.status(400).json({ error })
         }

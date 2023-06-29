@@ -7,7 +7,7 @@ const router = new Router()
 
 router.get('/hola', httpinformacioncliente.getCliente)
 
-router.post('/', [
+router.post('/guardar', [
     check("CC_cliente", "Por favor digite numero de cedula").not().isEmpty(),
     check("Nombre_cliente", "Por favor digite nombre").not().isEmpty(),
     check("Telefono_cliente", "Por favor digite numero de telefono").not().isEmpty(),

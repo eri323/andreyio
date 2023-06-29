@@ -22,7 +22,7 @@ const httpinformacioncliente ={
     try {
         const { CC_cliente, Nombre_cliente, Telefono_cliente }= req.body
         const cliente = new InformacionCliente({ CC_cliente, Nombre_cliente, Telefono_cliente })
-        await cliente.save()
+        cliente.save()
         res.json({ cliente })
     } catch (error) {
         res.status(400).json({ error })

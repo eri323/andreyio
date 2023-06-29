@@ -10,5 +10,5 @@ const Ruta = new mongoose.Schema({
     estado: { type: Number, default: 1 }
 })
 
-export default Ruta
+export default mongoose.model(" Ruta", Ruta)
 
